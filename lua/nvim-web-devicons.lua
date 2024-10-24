@@ -410,6 +410,13 @@ function M.setup(opts)
     refresh_icons()
   end
 
+  if user_icons.variant == "mono" then
+    global_opts.variant = "mono"
+    global_opts.mono_color = user_icons.mono_color
+    M.set_default_icon(default_icon.icon, user_icons.mono_color.color, user_icons.mono_color.cterm_color)
+    refresh_icons()
+  end
+
   if user_icons.override and user_icons.override.default_icon then
     default_icon = user_icons.override.default_icon
   end
