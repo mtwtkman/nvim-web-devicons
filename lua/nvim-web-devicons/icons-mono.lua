@@ -19,7 +19,7 @@ local function load(setting)
   local cterm_color = setting.cterm_color
 
   local icons_by_filename = make_mono(src.icons_by_filename, color, cterm_color)
-  local icons_by_file_extension = make_mono(src.icons_by_filename, color, cterm_color)
+  local icons_by_file_extension = make_mono(src.icons_by_file_extension, color, cterm_color)
   local icons_by_operating_system = make_mono(src.icons_by_operating_system, color, cterm_color)
   local icons_by_desktop_environment = make_mono(src.icons_by_desktop_environment, color, cterm_color)
   local icons_by_window_manager = make_mono(src.icons_by_window_manager, color, cterm_color)
