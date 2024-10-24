@@ -41,6 +41,7 @@ local global_opts = {
   default = false,
   color_icons = true,
   variant = nil,
+  mono_color = nil,
 }
 
 -- Set the current icons tables, depending on variant option, then &background
@@ -50,6 +51,8 @@ local function refresh_icons()
     theme = require "nvim-web-devicons.icons-light"
   elseif global_opts.variant == "dark" then
     theme = require "nvim-web-devicons.icons-default"
+  elseif global_opts.variant == "mono" then
+    theme = require("nvim-web-devicons.icons-mono").load(global_opts.mono_color)
   else
     if vim.o.background == "light" then
       theme = require "nvim-web-devicons.icons-light"
